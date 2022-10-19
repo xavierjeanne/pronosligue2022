@@ -1,8 +1,8 @@
 <?php
 namespace App\Http\Middleware;
 use Closure;
-use Illuminate\Support\Facades\Auth;
-class IsAdmin
+use Illuminate\Support\Facades\Auth ;
+class IsAdmin 
 {
     /**
      * Handle an incoming request.

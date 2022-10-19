@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('back.app')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="card-header">Admin View</div>
 
                 <div class="card-body">
-                  Welcome to admin dashboard
+                    Welcome to user
                 </div>
             </div>
         </div>

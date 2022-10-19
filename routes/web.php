@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -26,4 +27,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::group(['middleware' => ['admin']], function () {
    Route::get('/admin', [HomeController::class, 'adminView'])->name('admin');
+   Route::get('/admin/league', [AdminController::class, 'league'])->name('admin.league');
+   Route::get('/admin/user', [AdminController::class, 'user'])->name('admin.user');
+   Route::get('/admin/user/stat', [AdminController::class, 'userStat'])->name('admin.user.stat');
+   Route::get('/admin/league/stat', [AdminController::class, 'leagueStat'])->name('admin.league.stat');
+   Route::get('/admin/contact', [AdminController::class, 'contact'])->name('admin.contact');
 });
